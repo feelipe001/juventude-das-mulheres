@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit Digital - Autoestima e Beleza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #FFF5F5 0%, #FFF0F5 100%);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, #F9A8D4 0%, #F472B6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-700">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="title-font text-4xl md:text-5xl lg:text-6xl font-bold text-rose-800 mb-4">
+                Descubra o Segredo para se Sentir Linda e Confiante Todos os Dias!
+            </h1>
+            <p class="text-xl md:text-2xl text-rose-600 mb-8">
+                Um Kit Digital Completo para transformar sua autoestima, cuidar da sua beleza e deixar seu Instagram impecável!
+            </p>
+            
+            <!-- Product Image -->
+            <div class="max-w-3xl mx-auto mb-12 rounded-xl overflow-hidden shadow-xl">
+                <img src="https://images.unsplash.com/photo-1619451336070-0f3675a97f43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Kit Digital de Autoestima e Beleza" 
+                     class="w-full h-auto object-cover">
+            </div>
+            
+            <!-- Price Highlight -->
+            <div class="bg-white rounded-xl p-6 shadow-lg inline-block mb-8">
+                <div class="text-center">
+                    <p class="text-gray-500 line-through mb-1">De R$67,00</p>
+                    <p class="text-2xl font-bold text-rose-600 mb-2">Por apenas R$47,00</p>
+                    <p class="text-sm text-amber-600 font-semibold">Ou R$29,90 apenas hoje!</p>
+                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <a href="#order" class="pulse-animation inline-block bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold py-5 px-12 rounded-full text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                QUERO MEU KIT AGORA! <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </header>
+        
+        <!-- What You Get Section -->
+        <section class="mb-16">
+            <h2 class="title-font text-3xl md:text-4xl text-center text-rose-800 mb-12">
+                O que você vai receber
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4 feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-rose-700 mb-2">Diário Digital de Autoestima</h3>
+                    <p class="text-gray-600">Reflita sobre seu dia e fortaleça sua autoestima com prompts diários e exercícios poderosos.</p>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4 feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-rose-700 mb-2">Templates para Instagram</h3>
+                    <p class="text-gray-600">15 templates editáveis para deixar seu feed profissional e cheio de estilo.</p>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4 feature-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-rose-700 mb-2">Guia Rápido de Skincare e Beleza</h3>
+                    <p class="text-gray-600">Rotinas simples para cuidar da sua pele e realçar sua beleza natural sem gastar fortunas.</p>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4 feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-rose-700 mb-2">Mini-Planejador de Vida e Sonhos</h3>
+                    <p class="text-gray-600">Organize seus objetivos e dê passos concretos em direção à vida que você merece.</p>
+                </div>
+                
+                <!-- Item 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4 feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-rose-700 mb-2">Bônus Exclusivo</h3>
+                    <p class="text-gray-600">Oráculo da Autoestima: mensagens inspiradoras para dias difíceis.</p>
+                </div>
+                
+                <!-- Item 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4 feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-rose-700 mb-2">Acesso Imediato</h3>
+                    <p class="text-gray-600">Baixe agora mesmo e comece a transformação hoje!</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="mb-16 py-12 px-6 bg-white rounded-xl shadow-md">
+            <h2 class="title-font text-3xl md:text-4xl text-center text-rose-800 mb-12">
+                Transforme sua rotina e sua autoestima
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="flex items-start">
+                    <div class="text-2xl text-rose-500 mr-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-rose-700 mb-2">Melhore sua autoestima</h3>
+                        <p class="text-gray-600">Exercícios diários para se conectar com sua beleza interior e exterior.</p>
+                    </div>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="flex items-start">
+                    <div class="text-2xl text-rose-500 mr-4">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-rose-700 mb-2">Skincare acessível</h3>
+                        <p class="text-gray-600">Rotinas eficazes que cabem no seu bolso e na sua rotina.</p>
+                    </div>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="flex items-start">
+                    <div class="text-2xl text-rose-500 mr-4">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-rose-700 mb-2">Organize seus sonhos</h3>
+                        <p class="text-gray-600">Planeje e conquiste seus objetivos de forma prática e inspiradora.</p>
+                    </div>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="flex items-start">
+                    <div class="text-2xl text-rose-500 mr-4">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-rose-700 mb-2">Instagram profissional</h3>
+                        <p class="text-gray-600">Templates prontos para um feed bonito e coeso sem esforço.</p>
+                    </div>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="flex items-start">
+                    <div class="text-2xl text-rose-500 mr-4">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-rose-700 mb-2">Mensagens inspiradoras</h3>
+                        <p class="text-gray-600">Doses diárias de motivação para se sentir poderosa.</p>
+                    </div>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="flex items-start">
+                    <div class="text-2xl text-rose-500 mr-4">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-rose-700 mb-2">Resultados rápidos</h3>
+                        <p class="text-gray-600">Transformação visível em poucas semanas de uso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials -->
+        <section class="mb-16">
+            <h2 class="title-font text-3xl md:text-4xl text-center text-rose-800 mb-12">
+                O que dizem quem já experimentou
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex mb-4 text-amber-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Era tudo que eu precisava para me sentir bem comigo mesma! O diário mudou minha forma de me enxergar."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-rose-200 mr-3"></div>
+                        <span class="font-medium text-rose-700">Ana Clara</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex mb-4 text-amber-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Os templates deixaram meu Instagram muito mais profissional. Já recebi vários elogios e até propostas de trabalho!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-rose-200 mr-3"></div>
+                        <span class="font-medium text-rose-700">Juliana</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex mb-4 text-amber-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"O diário virou meu momento favorito do dia. Nunca imaginei que escrever sobre mim pudesse fazer tanta diferença."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-rose-200 mr-3"></div>
+                        <span class="font-medium text-rose-700">Fernanda</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Guarantee -->
+        <section class="mb-16 bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-8 shadow-inner border border-rose-100">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
+                    <div class="bg-white p-4 rounded-full shadow-lg">
+                        <i class="fas fa-shield-alt text-4xl text-rose-500"></i>
+                    </div>
+                </div>
+                <div class="md:w-3/4 text-center md:text-left">
+                    <h3 class="title-font text-2xl md:text-3xl text-rose-800 mb-3">Garantia de Satisfação</h3>
+                    <p class="text-lg text-gray-700">
+                        <span class="font-bold text-rose-600">7 dias de garantia incondicional.</span> Se por qualquer motivo você não amar seu Kit Digital, basta nos avisar e devolveremos 100% do seu dinheiro, sem perguntas.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Final CTA -->
+        <section id="order" class="text-center py-12">
+            <h2 class="title-font text-3xl md:text-4xl text-rose-800 mb-6">
+                Garanta agora o seu Kit Digital e comece hoje mesmo a viver sua melhor versão!
+            </h2>
+            
+            <!-- Price Highlight -->
+            <div class="bg-white rounded-xl p-6 shadow-lg inline-block mb-8">
+                <div class="text-center">
+                    <p class="text-gray-500 line-through mb-1">De R$67,00</p>
+                    <p class="text-2xl font-bold text-rose-600 mb-2">Por apenas R$47,00</p>
+                    <p class="text-sm text-amber-600 font-semibold">Ou R$29,90 apenas hoje!</p>
+                </div>
+            </div>
+            
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                Clique no botão abaixo para ter acesso imediato a todos os materiais e começar sua transformação hoje mesmo!
+            </p>
+            
+            <a href="#" class="pulse-animation inline-block bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold py-5 px-12 rounded-full text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 mb-4">
+                QUERO MEU KIT AGORA! <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            
+            <div class="flex items-center justify-center text-sm text-gray-500">
+                <i class="fas fa-lock mr-2"></i>
+                Pagamento seguro • Acesso imediato
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm mt-16 pt-8 border-t border-rose-100">
+            <p>© 2023 Kit Digital Autoestima & Beleza. Todos os direitos reservados.</p>
+            <p class="mt-2">
+                <a href="#" class="text-rose-600 hover:text-rose-800">Termos de Uso</a> • 
+                <a href="#" class="text-rose-600 hover:text-rose-800">Política de Privacidade</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
