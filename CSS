@@ -76,3 +76,24 @@
     background-color: #d81b60;
   }
 </style>
+<style>
+  body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+  }
+
+  body.dark-mode .bg-white {
+    background-color: #333333 !important;
+  }
+
+  body.dark-mode .text-dark {
+    color: #f1f1f1 !important;
+  }
+
+  /* se quiser ajustar botões também */
+  body.dark-mode button {
+    background-color: #444 !important;
+    color: #fff !important;
+  }
+</style>
+
