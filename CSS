@@ -1,0 +1,73 @@
+<style>
+  .carousel-container {
+    width: 320px;
+    margin: 50px auto;
+    position: relative;
+  }
+
+  .carousel-slide {
+    display: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid #f8bbd0;
+    background-color: #ffffff;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }
+
+  .active-slide {
+    display: block;
+  }
+
+  /* Bolinhas */
+  .dots {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #f8bbd0;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .active-dot {
+    background-color: #d81b60;
+  }
+
+  /* Botões de navegação */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    padding: 8px;
+    margin-top: -22px;
+    color: #d81b60;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: #d81b60;
+    color: #fff;
+  }
+</style>
