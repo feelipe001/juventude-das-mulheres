@@ -90,18 +90,26 @@
     color: #f1f1f1;
   }
 
-  body.dark-mode .bg-white {
-    background-color: #333333 !important;
-  }
-
-  body.dark-mode .text-dark {
+  body.dark-mode .text-dark,
+  body.dark-mode .text-text,
+  body.dark-mode .text-primary,
+  body.dark-mode .text-accent {
     color: #f1f1f1 !important;
   }
 
-  /* se quiser ajustar botões também */
+  body.dark-mode .bg-white,
+  body.dark-mode .bg-white\/20,
+  body.dark-mode .bg-primary\/10 {
+    background-color: #333333 !important;
+  }
+
   body.dark-mode button {
     background-color: #444 !important;
     color: #fff !important;
+  }
+
+  body.dark-mode a {
+    color: #ff69b4 !important;
   }
 </style>
     <script>
