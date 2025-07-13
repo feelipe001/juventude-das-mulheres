@@ -6,339 +6,325 @@
     <title>Descubra o Segredo para se Sentir Linda, Confiante e Realizada Todos os Dias!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF9AA2',
+                        secondary: '#FFB7B2',
+                        accent: '#FFDAC1',
+                        light: '#E2F0CB',
+                        text: '#5E5E5E',
+                        dark: '#3A3A3A',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
         
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #fff9fa;
+            color: #5E5E5E;
+            background-color: #FFF9FB;
         }
         
-        .title-font {
-            font-family: 'Playfair Display', serif;
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255,154,162,0.1) 0%, rgba(255,214,193,0.1) 100%);
         }
         
-        .gradient-bg {
-            background: linear-gradient(135deg, #fff9fa 0%, #fff0f5 100%);
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255,154,162,0.2);
         }
         
-        .pink-shadow {
-            box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.3);
-        }
-        
-        .pulse-animation {
+        .pulse {
             animation: pulse 2s infinite;
         }
         
         @keyframes pulse {
             0% {
                 transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 154, 162, 0.7);
             }
-            50% {
-                transform: scale(1.05);
+            70% {
+                transform: scale(1.02);
+                box-shadow: 0 0 0 10px rgba(255, 154, 162, 0);
             }
             100% {
                 transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 154, 162, 0);
             }
         }
         
-        .mockup-img {
-            transition: all 0.3s ease;
+        .floating {
+            animation: floating 3s ease-in-out infinite;
         }
         
-        .mockup-img:hover {
-            transform: translateY(-10px);
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
     </style>
 </head>
-<body class="gradient-bg">
+<body class="antialiased">
     <!-- Header -->
-    <header class="py-6 px-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold text-pink-600 title-font">Beleza Interior</div>
-            <button class="md:hidden text-pink-600">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div class="text-2xl font-serif font-bold text-primary">Beleza<span class="text-accent">Confiante</span></div>
+            <div class="hidden md:flex space-x-4">
+                <a href="#beneficios" class="text-text hover:text-primary transition">Benefícios</a>
+                <a href="#conteudo" class="text-text hover:text-primary transition">Conteúdo</a>
+                <a href="#depoimentos" class="text-text hover:text-primary transition">Depoimentos</a>
+            </div>
+            <button class="md:hidden text-primary">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
-            <nav class="hidden md:block">
-                <ul class="flex space-x-8">
-                    <li><a href="#sobre" class="text-pink-600 hover:text-pink-800 font-medium">Sobre</a></li>
-                    <li><a href="#conteudo" class="text-pink-600 hover:text-pink-800 font-medium">Conteúdo</a></li>
-                    <li><a href="#depoimentos" class="text-pink-600 hover:text-pink-800 font-medium">Depoimentos</a></li>
-                    <li><a href="#garantia" class="text-pink-600 hover:text-pink-800 font-medium">Garantia</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="py-12 md:py-20 px-4">
-        <div class="container mx-auto max-w-5xl text-center">
-            <h1 class="title-font text-3xl md:text-5xl font-bold text-pink-700 leading-tight mb-6">
-                Descubra o Segredo para se Sentir Linda, Confiante e Realizada Todos os Dias!
-            </h1>
-            <p class="text-xl md:text-2xl text-pink-600 mb-10">
-                Um Kit Digital Completo para transformar sua autoestima, revelar sua beleza única e criar a vida dos seus sonhos — enquanto brilha nas redes sociais.
-            </p>
-            
-            <div class="bg-white rounded-xl p-8 shadow-lg max-w-4xl mx-auto mb-12">
-                <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                    Você já acordou olhando no espelho e não gostou do que viu? Já sentiu que não estava no seu melhor dia, mesmo tentando se arrumar? Eu já passei por isso muitas vezes, até descobrir que a verdadeira beleza começa de dentro para fora.
-                </p>
-                <p class="text-gray-700 text-lg leading-relaxed">
-                    Me chamo Ana, e depois de anos lutando contra minha autoimagem, desenvolvi um método completo que me ajudou a me sentir linda todos os dias - mesmo nos dias ruins. Agora quero compartilhar esse segredo com você!
-                </p>
+    <section class="hero-gradient py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <p class="text-primary font-semibold mb-6">Se você mulher tem entre 15 a 35 anos, está cansada de se sentir perdida, sem saber o que fazer pra se cuidar, se organizar e se sentir linda… essa página é pra você.</p>
+                <h1 class="text-3xl md:text-5xl font-serif font-bold text-dark mb-6 leading-tight">Você não nasceu para viver confusa, insegura ou invisível. <span class="text-primary">Descubra o Segredo para se Sentir Linda, Confiante e Realizada Todos os Dias!</span></h1>
+                <p class="text-xl text-text mb-8">Um Kit Digital criado para mulheres que só precisam de um empurrão na direção certa para cuidar da beleza, autoestima, organização e brilhar na vida — e nas redes sociais.</p>
+                <button class="bg-primary hover:bg-secondary text-white font-bold py-4 px-8 rounded-full shadow-lg transition transform hover:scale-105 pulse">QUERO MEU KIT AGORA!</button>
             </div>
             
-            <a href="#oferta" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-5 px-10 rounded-full text-xl inline-block pulse-animation pink-shadow">
-                QUERO MEU KIT AGORA!
-            </a>
+            <div class="flex justify-center">
+                <div class="relative w-full max-w-4xl">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-lg blur opacity-25"></div>
+                    <div class="relative bg-white rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596704017256-dfb4c3b9e1a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mulher feliz e confiante" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-dark mb-8 text-center">A história da Ana - que poderia ser a sua</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Ana antes" class="rounded-full w-48 h-48 object-cover border-4 border-primary mx-auto">
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-text mb-4">Ana tinha 22 anos e se sentia completamente perdida. Todo dia era uma luta contra a insegurança, a desorganização e aquela sensação de que todas as outras mulheres tinham algo que ela não tinha.</p>
+                        <p class="text-text mb-4">Ela tentava seguir dicas aleatórias na internet, mas só ficava mais confusa. Seu Instagram não refletia quem ela era de verdade, sua pele sofria com os produtos errados e ela não conseguia organizar nem sua rotina, muito menos seus sonhos.</p>
+                        <p class="text-text mb-4">Até que descobriu o <span class="font-semibold text-primary">Kit Beleza Confiante</span>. Em poucas semanas, tudo mudou. Ela finalmente tinha um passo a passo claro para cuidar de si mesma, organizar sua vida e mostrar sua verdadeira beleza ao mundo.</p>
+                        <p class="text-text font-semibold">Hoje, Ana se olha no espelho e vê a mulher incrível que sempre esteve lá - só precisava de direcionamento para deixá-la brilhar.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Video Section -->
-    <section id="sobre" class="py-12 md:py-20 px-4 bg-white">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="title-font text-3xl md:text-4xl font-bold text-center text-pink-700 mb-6">
-                Assista ao vídeo abaixo e descubra tudo o que vai transformar seus dias!
-            </h2>
-            <p class="text-center text-gray-600 text-lg mb-12 max-w-3xl mx-auto">
-                No vídeo, apresento detalhes do kit, explico como o skincare pode elevar sua autoestima, dicas para se organizar e deixar seu Instagram lindo sem complicação.
-            </p>
+    <section class="py-16 bg-gradient-to-b from-white to-primary/10" id="video">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-dark mb-4">Assista agora e descubra tudo sobre como transformar seus dias!</h2>
+                <p class="text-text mb-8">No vídeo, explico como o skincare pode elevar sua autoestima, como se organizar e deixar seu Instagram lindo sem complicação.</p>
+            </div>
             
-            <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-xl overflow-hidden shadow-lg">
-                <iframe class="w-full h-96" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="flex justify-center">
+                <div class="relative w-full max-w-4xl aspect-video bg-gray-200 rounded-xl overflow-hidden shadow-xl">
+                    <!-- Placeholder for video embed -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-play-circle text-6xl text-primary opacity-80"></i>
+                            <p class="mt-2 text-dark font-semibold">Clique para assistir ao vídeo</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- What's Included -->
-    <section id="conteudo" class="py-12 md:py-20 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="title-font text-3xl md:text-4xl font-bold text-center text-pink-700 mb-16">
-                Tudo o que você vai receber no Kit Digital:
-            </h2>
+    <!-- Content Section -->
+    <section class="py-16 bg-white" id="conteudo">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-dark mb-4">O que você vai receber no Kit Beleza Confiante</h2>
+                <p class="text-text">Tudo que você precisa em um só lugar, formatado para você acessar facilmente no celular, tablet ou computador.</p>
+            </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Item 1 -->
-                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-pink-500 mb-4 text-4xl">
-                        <i class="fas fa-book-open"></i>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
+                    <div class="h-48 bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                        <i class="fas fa-book-open text-6xl text-white"></i>
                     </div>
-                    <h3 class="title-font text-2xl font-bold text-pink-700 mb-4">Diário Digital de Autoestima</h3>
-                    <p class="text-gray-600">
-                        Um diário guiado para registrar seus pensamentos, celebrar pequenas vitórias e construir confiança dia após dia.
-                    </p>
+                    <div class="p-6">
+                        <h3 class="font-serif font-bold text-xl text-dark mb-2">Diário Digital de Autoestima</h3>
+                        <p class="text-text">Exercícios diários para construir sua confiança e amor próprio, com prompts que vão te ajudar a se reconectar com sua beleza única.</p>
+                    </div>
                 </div>
                 
                 <!-- Item 2 -->
-                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-pink-500 mb-4 text-4xl">
-                        <i class="fas fa-mobile-alt"></i>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
+                    <div class="h-48 bg-gradient-to-r from-secondary to-primary flex items-center justify-center">
+                        <i class="fas fa-mobile-screen text-6xl text-white"></i>
                     </div>
-                    <h3 class="title-font text-2xl font-bold text-pink-700 mb-4">Pack de Templates para Instagram</h3>
-                    <p class="text-gray-600">
-                        50 templates editáveis para deixar seu feed lindo e profissional, mesmo sem conhecimentos de design.
-                    </p>
+                    <div class="p-6">
+                        <h3 class="font-serif font-bold text-xl text-dark mb-2">Pack de Templates para Instagram</h3>
+                        <p class="text-text">Modelos prontos para deixar seu feed lindo, stories criativos e dicas de conteúdo - tudo editável no celular, sem precisar saber design.</p>
+                    </div>
                 </div>
                 
                 <!-- Item 3 -->
-                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-pink-500 mb-4 text-4xl">
-                        <i class="fas fa-spa"></i>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
+                    <div class="h-48 bg-gradient-to-r from-accent to-light flex items-center justify-center">
+                        <i class="fas fa-spa text-6xl text-white"></i>
                     </div>
-                    <h3 class="title-font text-2xl font-bold text-pink-700 mb-4">Guia Rápido de Skincare e Beleza</h3>
-                    <p class="text-gray-600">
-                        Rotinas simples para cuidar da sua pele com produtos acessíveis e dicas de maquiagem para realçar sua beleza natural.
-                    </p>
+                    <div class="p-6">
+                        <h3 class="font-serif font-bold text-xl text-dark mb-2">Guia Rápido de Skincare e Beleza</h3>
+                        <p class="text-text">Rotinas personalizáveis para cada tipo de pele, dicas de maquiagem fácil e truques para realçar sua beleza natural.</p>
+                    </div>
                 </div>
                 
                 <!-- Item 4 -->
-                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-pink-500 mb-4 text-4xl">
-                        <i class="fas fa-tasks"></i>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
+                    <div class="h-48 bg-gradient-to-r from-light to-accent flex items-center justify-center">
+                        <i class="fas fa-calendar-check text-6xl text-white"></i>
                     </div>
-                    <h3 class="title-font text-2xl font-bold text-pink-700 mb-4">Mini-Planejador de Vida e Sonhos</h3>
-                    <p class="text-gray-600">
-                        Um sistema simples para organizar seus objetivos pessoais e profissionais, mantendo o foco no que realmente importa.
-                    </p>
+                    <div class="p-6">
+                        <h3 class="font-serif font-bold text-xl text-dark mb-2">Mini-Planejador de Vida e Sonhos</h3>
+                        <p class="text-text">Organize seus objetivos, metas e rotina de forma simples e motivadora, com checklists e reflexões poderosas.</p>
+                    </div>
                 </div>
                 
                 <!-- Item 5 -->
-                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-pink-500 mb-4 text-4xl">
-                        <i class="fas fa-star"></i>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
+                    <div class="h-48 bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
+                        <i class="fas fa-star text-6xl text-white"></i>
                     </div>
-                    <h3 class="title-font text-2xl font-bold text-pink-700 mb-4">Bônus Exclusivo: Oráculo da Autoestima</h3>
-                    <p class="text-gray-600">
-                        Cartas digitais com mensagens motivacionais para te inspirar nos dias em que você mais precisa.
-                    </p>
+                    <div class="p-6">
+                        <h3 class="font-serif font-bold text-xl text-dark mb-2">Bônus Exclusivo: Oráculo da Autoestima</h3>
+                        <p class="text-text">Cartas digitais com mensagens motivacionais para os dias em que você precisar de um empurrãozinho extra de confiança.</p>
+                    </div>
                 </div>
                 
                 <!-- Item 6 -->
-                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-pink-500 mb-4 text-4xl">
-                        <i class="fas fa-gift"></i>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
+                    <div class="h-48 bg-gradient-to-r from-secondary to-light flex items-center justify-center">
+                        <i class="fas fa-gift text-6xl text-white"></i>
                     </div>
-                    <h3 class="title-font text-2xl font-bold text-pink-700 mb-4">Acesso à Comunidade Exclusiva</h3>
-                    <p class="text-gray-600">
-                        Grupo privado no WhatsApp com outras mulheres incríveis para trocar experiências e receber apoio.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits -->
-    <section class="py-12 md:py-20 px-4 bg-white">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="title-font text-3xl md:text-4xl font-bold text-center text-pink-700 mb-16">
-                O que este kit vai fazer por você:
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="flex items-start">
-                    <div class="text-pink-500 mr-4 text-2xl">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg text-pink-700 mb-2">Sentir-se mais bonita e confiante</h3>
-                        <p class="text-gray-600">Descubra sua beleza única e aprenda a valorizá-la todos os dias.</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start">
-                    <div class="text-pink-500 mr-4 text-2xl">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg text-pink-700 mb-2">Organizar pensamentos e sonhos</h3>
-                        <p class="text-gray-600">Tenha clareza sobre seus objetivos e como alcançá-los.</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start">
-                    <div class="text-pink-500 mr-4 text-2xl">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg text-pink-700 mb-2">Melhorar a pele sem gastar muito</h3>
-                        <p class="text-gray-600">Rotinas de skincare eficazes com produtos acessíveis.</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start">
-                    <div class="text-pink-500 mr-4 text-2xl">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg text-pink-700 mb-2">Ter Instagram lindo e profissional</h3>
-                        <p class="text-gray-600">Templates prontos para impressionar seus seguidores.</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start">
-                    <div class="text-pink-500 mr-4 text-2xl">
-                        <i class="fas fa-sun"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg text-pink-700 mb-2">Inspirar-se todos os dias</h3>
-                        <p class="text-gray-600">Mensagens motivacionais para manter o ânimo alto.</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start">
-                    <div class="text-pink-500 mr-4 text-2xl">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg text-pink-700 mb-2">Se sentir única e capaz</h3>
-                        <p class="text-gray-600">Ferramentas para desenvolver autoconfiança e autoestima.</p>
+                    <div class="p-6">
+                        <h3 class="font-serif font-bold text-xl text-dark mb-2">Acesso à Comunidade Exclusiva</h3>
+                        <p class="text-text">Grupo privado no Telegram onde você pode tirar dúvidas, compartilhar conquistas e receber apoio de outras mulheres incríveis.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mockups -->
-    <section class="py-12 md:py-20 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="title-font text-3xl md:text-4xl font-bold text-center text-pink-700 mb-16">
-                Veja como é o Kit Digital por dentro:
-            </h2>
+    <!-- Benefits Section -->
+    <section class="py-16 bg-primary/10" id="beneficios">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-dark mb-4">O que você vai conquistar com o Kit Beleza Confiante</h2>
+                <p class="text-text">Mais do que produtos digitais, você vai receber um caminho claro para se tornar a melhor versão de si mesma.</p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="mockup-img">
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <div class="bg-gray-100 rounded-lg p-2 mb-4">
-                            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Diário Digital" class="w-full h-48 object-cover rounded">
-                        </div>
-                        <h3 class="font-bold text-lg text-pink-700 text-center">Diário Digital</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start">
+                    <div class="bg-primary/10 p-3 rounded-full mr-4">
+                        <i class="fas fa-heart text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-dark mb-2">Nunca mais se sentir perdida</h3>
+                        <p class="text-text text-sm">Direção clara em todas as áreas da sua vida feminina.</p>
                     </div>
                 </div>
                 
-                <div class="mockup-img">
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <div class="bg-gray-100 rounded-lg p-2 mb-4">
-                            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Templates Instagram" class="w-full h-48 object-cover rounded">
-                        </div>
-                        <h3 class="font-bold text-lg text-pink-700 text-center">Templates Instagram</h3>
+                <!-- Benefit 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start">
+                    <div class="bg-primary/10 p-3 rounded-full mr-4">
+                        <i class="fas fa-spa text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-dark mb-2">Rotina de beleza eficaz</h3>
+                        <p class="text-text text-sm">Saber exatamente o que fazer para cuidar da sua pele e beleza.</p>
                     </div>
                 </div>
                 
-                <div class="mockup-img">
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <div class="bg-gray-100 rounded-lg p-2 mb-4">
-                            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Guia Skincare" class="w-full h-48 object-cover rounded">
-                        </div>
-                        <h3 class="font-bold text-lg text-pink-700 text-center">Guia Skincare</h3>
+                <!-- Benefit 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start">
+                    <div class="bg-primary/10 p-3 rounded-full mr-4">
+                        <i class="fas fa-tasks text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-dark mb-2">Vida organizada</h3>
+                        <p class="text-text text-sm">Controle sobre seus compromissos, sonhos e metas.</p>
                     </div>
                 </div>
                 
-                <div class="mockup-img">
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <div class="bg-gray-100 rounded-lg p-2 mb-4">
-                            <img src="https://images.unsplash.com/photo-1518455022959-f38e5142abfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Planejador" class="w-full h-48 object-cover rounded">
-                        </div>
-                        <h3 class="font-bold text-lg text-pink-700 text-center">Planejador</h3>
+                <!-- Benefit 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start">
+                    <div class="bg-primary/10 p-3 rounded-full mr-4">
+                        <i class="fas fa-mobile text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-dark mb-2">Instagram incrível</h3>
+                        <p class="text-text text-sm">Perfil que reflete quem você é, mesmo sem saber design.</p>
                     </div>
                 </div>
                 
-                <div class="mockup-img">
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <div class="bg-gray-100 rounded-lg p-2 mb-4">
-                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Oráculo" class="w-full h-48 object-cover rounded">
-                        </div>
-                        <h3 class="font-bold text-lg text-pink-700 text-center">Oráculo</h3>
+                <!-- Benefit 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start">
+                    <div class="bg-primary/10 p-3 rounded-full mr-4">
+                        <i class="fas fa-smile text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-dark mb-2">Orgulho ao se olhar</h3>
+                        <p class="text-text text-sm">Aquele sorriso de satisfação ao se ver no espelho.</p>
                     </div>
                 </div>
                 
-                <div class="mockup-img">
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <div class="bg-gray-100 rounded-lg p-2 mb-4">
-                            <img src="https://images.unsplash.com/photo-1529333164857-3f1164d1cb24?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Kit Completo" class="w-full h-48 object-cover rounded">
-                        </div>
-                        <h3 class="font-bold text-lg text-pink-700 text-center">Kit Completo</h3>
+                <!-- Benefit 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start">
+                    <div class="bg-primary/10 p-3 rounded-full mr-4">
+                        <i class="fas fa-award text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-dark mb-2">Realização diária</h3>
+                        <p class="text-text text-sm">A sensação de que está no caminho certo e conquistando seus objetivos.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="depoimentos" class="py-12 md:py-20 px-4 bg-white">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="title-font text-3xl md:text-4xl font-bold text-center text-pink-700 mb-16">
-                O que estão dizendo sobre o kit:
-            </h2>
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white" id="depoimentos">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-dark mb-4">O que dizem mulheres que já usaram o Kit</h2>
+                <p class="text-text">Elas estavam onde você está agora - veja a transformação que viveram</p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Testimonial 1 -->
-                <div class="bg-pink-50 rounded-xl p-8 shadow-md">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 border border-primary/20">
                     <div class="flex items-center mb-4">
-                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Juliana" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Juliana" class="w-12 h-12 rounded-full object-cover mr-4">
                         <div>
-                            <h4 class="font-bold text-pink-700">Juliana S.</h4>
-                            <div class="text-yellow-400">
+                            <h4 class="font-semibold text-dark">Juliana, 24 anos</h4>
+                            <div class="flex text-yellow-400">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -347,18 +333,16 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">
-                        "Nunca imaginei que templates para Instagram poderiam me ajudar tanto! Meu feed ficou lindo e comecei a receber muitos elogios. O diário de autoestima mudou minha vida, me sinto mais confiante do que nunca!"
-                    </p>
+                    <p class="text-text italic">"O diário de autoestima mudou minha vida. Finalmente entendi que minha beleza não precisa ser igual a de ninguém. E os templates para Instagram são tão fáceis de usar que até minha mãe elogiou!"</p>
                 </div>
                 
                 <!-- Testimonial 2 -->
-                <div class="bg-pink-50 rounded-xl p-8 shadow-md">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 border border-primary/20">
                     <div class="flex items-center mb-4">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Camila" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Camila" class="w-12 h-12 rounded-full object-cover mr-4">
                         <div>
-                            <h4 class="font-bold text-pink-700">Camila R.</h4>
-                            <div class="text-yellow-400">
+                            <h4 class="font-semibold text-dark">Camila, 19 anos</h4>
+                            <div class="flex text-yellow-400">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -367,18 +351,16 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">
-                        "O guia de skincare foi revolucionário! Minha pele nunca esteve tão bonita. O planejador me ajudou a organizar meus sonhos e já estou vendo resultados. Vale cada centavo!"
-                    </p>
+                    <p class="text-text italic">"Nunca imaginei que um guia de skincare pudesse fazer tanta diferença. Minha pele melhorou em 2 semanas e isso aumentou demais minha autoestima. O planejador me ajudou a organizar minha faculdade e ainda sobra tempo pra mim!"</p>
                 </div>
                 
                 <!-- Testimonial 3 -->
-                <div class="bg-pink-50 rounded-xl p-8 shadow-md">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 border border-primary/20">
                     <div class="flex items-center mb-4">
-                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Fernanda" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Fernanda" class="w-12 h-12 rounded-full object-cover mr-4">
                         <div>
-                            <h4 class="font-bold text-pink-700">Fernanda M.</h4>
-                            <div class="text-yellow-400">
+                            <h4 class="font-semibold text-dark">Fernanda, 28 anos</h4>
+                            <div class="flex text-yellow-400">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -387,155 +369,145 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">
-                        "Comprei sem muitas expectativas e me surpreendi! O oráculo da autoestima me ajuda nos dias difíceis. A comunidade é super acolhedora. Recomendo para todas as mulheres!"
-                    </p>
+                    <p class="text-text italic">"Depois de anos me sentindo invisível, finalmente descobri como me valorizar. A comunidade é um apoio incrível e o oráculo da autoestima sempre me surpreende com mensagens perfeitas para o momento que estou vivendo."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="py-16 bg-primary/10">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-sm p-8 text-center">
+                <div class="inline-block bg-primary/10 p-4 rounded-full mb-6">
+                    <i class="fas fa-shield-alt text-primary text-3xl"></i>
+                </div>
+                <h2 class="text-2xl font-serif font-bold text-dark mb-4">Garantia Blindada 7 Dias</h2>
+                <p class="text-text mb-6">Se por qualquer motivo você não amar o Kit Beleza Confiante, basta nos avisar em até 7 dias após a compra e devolveremos cada centavo. Sem perguntas, sem burocracia.</p>
+                <p class="font-semibold text-dark">Você não tem nada a perder e tudo a ganhar!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="py-16 bg-gradient-to-b from-primary to-secondary">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h2 class="text-2xl md:text-4xl font-serif font-bold mb-6">De <span class="line-through opacity-75">R$97,00</span> por apenas <span class="text-5xl">R$47,00</span></h2>
+                <p class="text-xl mb-8">— apenas hoje!</p>
+                
+                <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 mb-8">
+                    <p class="font-bold mb-2">⚠️ Oferta válida somente para hoje, <span id="current-date">00/00/0000</span> às <span id="current-time">00:00</span>.</p>
+                    <p class="mb-4">Tempo restante para garantir seu desconto:</p>
+                    <div id="countdown" class="text-3xl font-bold">17:00:00</div>
                 </div>
                 
-                <!-- Testimonial 4 -->
-                <div class="bg-pink-50 rounded-xl p-8 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <img src="https://randomuser.me/api/portraits/women/76.jpg" alt="Patrícia" class="w-16 h-16 rounded-full object-cover mr-4">
-                        <div>
-                            <h4 class="font-bold text-pink-700">Patrícia L.</h4>
-                            <div class="text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                <button class="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-8 rounded-full shadow-lg transition transform hover:scale-105 mb-8 pulse">QUERO MEU KIT AGORA!</button>
+                
+                <div class="flex justify-center mb-8">
+                    <div class="flex items-center space-x-4 max-w-md">
+                        <div class="flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Mulher segurando celular" class="w-16 h-16 rounded-full object-cover border-2 border-white">
+                        </div>
+                        <div class="text-left">
+                            <p class="font-semibold">A única diferença entre você e a mulher confiante que admira é saber o caminho.</p>
+                            <p class="font-serif italic">O seu está aqui.</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">
-                        "Depois da maternidade, minha autoestima estava lá embaixo. Esse kit me ajudou a me redescobrir e me sentir bonita novamente. Obrigada por esse presente!"
-                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                    <div class="bg-white/10 p-2 rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Diário digital" class="w-full h-auto rounded shadow-md floating">
+                    </div>
+                    <div class="bg-white/10 p-2 rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Planner digital" class="w-full h-auto rounded shadow-md floating" style="animation-delay: 0.5s;">
+                    </div>
+                    <div class="bg-white/10 p-2 rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Templates Instagram" class="w-full h-auto rounded shadow-md floating" style="animation-delay: 1s;">
+                    </div>
+                    <div class="bg-white/10 p-2 rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Guia de skincare" class="w-full h-auto rounded shadow-md floating" style="animation-delay: 1.5s;">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Guarantee -->
-    <section id="garantia" class="py-12 md:py-20 px-4">
-        <div class="container mx-auto max-w-4xl bg-white rounded-xl shadow-lg p-8 md:p-12 text-center">
-            <div class="text-pink-500 text-5xl mb-6">
-                <i class="fas fa-shield-alt"></i>
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-dark mb-8 text-center">Perguntas Frequentes</h2>
+                
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="border border-primary/20 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-4 bg-primary/5 hover:bg-primary/10 transition">
+                            <span class="font-semibold text-dark text-left">Como vou receber o kit após a compra?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden p-4 text-text">
+                            <p>Imediatamente após a confirmação do pagamento, você receberá um e-mail com acesso à área de membros, onde poderá baixar todos os arquivos do kit. Eles estão formatados para celular, tablet e computador.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 2 -->
+                    <div class="border border-primary/20 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-4 bg-primary/5 hover:bg-primary/10 transition">
+                            <span class="font-semibold text-dark text-left">Preciso instalar algum programa especial?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden p-4 text-text">
+                            <p>Não! Todos os arquivos são em PDF ou formatos editáveis que podem ser usados em qualquer celular ou computador. Os templates para Instagram podem ser editados direto no Canva (gratuito).</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 3 -->
+                    <div class="border border-primary/20 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-4 bg-primary/5 hover:bg-primary/10 transition">
+                            <span class="font-semibold text-dark text-left">E se eu não gostar do conteúdo?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden p-4 text-text">
+                            <p>Você tem 7 dias de garantia incondicional. Se por qualquer motivo não amar o kit, basta nos enviar um e-mail e devolveremos todo seu dinheiro, sem perguntas.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 4 -->
+                    <div class="border border-primary/20 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-4 bg-primary/5 hover:bg-primary/10 transition">
+                            <span class="font-semibold text-dark text-left">Por quanto tempo terei acesso ao material?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden p-4 text-text">
+                            <p>O acesso é vitalício! Você pode baixar agora e usar para sempre, no seu ritmo. Além disso, todas as atualizações futuras serão suas sem custo adicional.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h2 class="title-font text-3xl md:text-4xl font-bold text-pink-700 mb-6">
-                Garantia Incondicional de 7 Dias
-            </h2>
-            <p class="text-gray-700 text-lg mb-8 max-w-2xl mx-auto">
-                Se por qualquer motivo você não amar o kit, basta nos avisar dentro de 7 dias e devolveremos 100% do seu dinheiro. Sem perguntas, sem burocracia.
-            </p>
-            <p class="text-gray-600 font-medium">
-                Você não tem nada a perder e tudo a ganhar!
-            </p>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section id="oferta" class="py-12 md:py-20 px-4 bg-pink-700 text-white">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="title-font text-3xl md:text-4xl font-bold mb-6">
-                Escolha se sentir linda, confiante e organizada todos os dias.
-            </h2>
-            <p class="text-xl mb-8">
-                Garanta seu Kit Digital agora e viva a sua melhor versão!
-            </p>
-            
-            <div class="bg-white rounded-xl p-8 shadow-lg max-w-2xl mx-auto mb-10">
-                <div class="flex justify-center items-baseline mb-6">
-                    <span class="text-gray-500 line-through text-2xl mr-4">R$97,00</span>
-                    <span class="text-pink-700 font-bold text-4xl">R$47,00</span>
-                </div>
-                <p class="text-gray-600 mb-6">Apenas hoje!</p>
+    <!-- Final CTA -->
+    <section class="py-16 bg-primary/10">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl md:text-4xl font-serif font-bold text-dark mb-6">Você merece se sentir linda, confiante e realizada todos os dias</h2>
+                <p class="text-xl text-text mb-8">Não deixe essa oportunidade passar - o desconto acaba em:</p>
                 
-                <a href="#" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-5 px-10 rounded-full text-xl inline-block pulse-animation pink-shadow w-full">
-                    QUERO MEU KIT AGORA!
-                </a>
-                
-                <div class="mt-6">
-                    <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png" alt="PayPal" class="h-10 mx-auto">
-                    <p class="text-gray-500 text-sm mt-2">Pagamento seguro via PayPal ou cartão de crédito</p>
-                </div>
-            </div>
-            
-            <p class="text-pink-100">
-                <i class="fas fa-lock mr-2"></i> Sua informação está segura. Nunca compartilhamos seus dados.
-            </p>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="py-12 md:py-20 px-4 bg-white">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="title-font text-3xl md:text-4xl font-bold text-center text-pink-700 mb-12">
-                Perguntas Frequentes
-            </h2>
-            
-            <div class="space-y-6">
-                <!-- Question 1 -->
-                <div class="border-b border-gray-200 pb-6">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left">
-                        <h3 class="font-bold text-lg text-pink-700">Como recebo o kit após a compra?</h3>
-                        <i class="fas fa-plus text-pink-500"></i>
-                    </button>
-                    <div class="faq-content mt-4 hidden">
-                        <p class="text-gray-600">
-                            Imediatamente após a confirmação do pagamento, você receberá um e-mail com os links para download de todos os materiais. O kit é 100% digital e você pode acessar de qualquer dispositivo.
-                        </p>
-                    </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 mb-8 inline-block">
+                    <div id="countdown2" class="text-3xl font-bold text-dark">17:00:00</div>
                 </div>
                 
-                <!-- Question 2 -->
-                <div class="border-b border-gray-200 pb-6">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left">
-                        <h3 class="font-bold text-lg text-pink-700">Preciso de algum programa especial para usar?</h3>
-                        <i class="fas fa-plus text-pink-500"></i>
-                    </button>
-                    <div class="faq-content mt-4 hidden">
-                        <p class="text-gray-600">
-                            Não! Os arquivos estão em formatos universais (PDF, PNG, JPG) que podem ser abertos em qualquer smartphone, tablet ou computador. Os templates para Instagram podem ser editados em aplicativos gratuitos como Canva.
-                        </p>
-                    </div>
-                </div>
+                <button class="bg-primary hover:bg-secondary text-white font-bold py-4 px-8 rounded-full shadow-lg transition transform hover:scale-105 mb-8 pulse">SIM, QUERO MEU KIT AGORA!</button>
                 
-                <!-- Question 3 -->
-                <div class="border-b border-gray-200 pb-6">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left">
-                        <h3 class="font-bold text-lg text-pink-700">Posso compartilhar o kit com minhas amigas?</h3>
-                        <i class="fas fa-plus text-pink-500"></i>
-                    </button>
-                    <div class="faq-content mt-4 hidden">
-                        <p class="text-gray-600">
-                            Cada kit é para uso pessoal da compradora. Compartilhar os arquivos é violação dos direitos autorais. Se suas amigas gostarem, indique o site para que elas adquiram o próprio kit - você ainda pode ganhar brindes pelo programa de indicação!
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Question 4 -->
-                <div class="border-b border-gray-200 pb-6">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left">
-                        <h3 class="font-bold text-lg text-pink-700">E se eu não gostar do kit?</h3>
-                        <i class="fas fa-plus text-pink-500"></i>
-                    </button>
-                    <div class="faq-content mt-4 hidden">
-                        <p class="text-gray-600">
-                            Oferecemos garantia incondicional de 7 dias. Se por qualquer motivo você não ficar satisfeita, basta nos enviar um e-mail dentro desse período e devolveremos 100% do seu dinheiro, sem perguntas.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Question 5 -->
-                <div class="border-b border-gray-200 pb-6">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left">
-                        <h3 class="font-bold text-lg text-pink-700">Por quanto tempo terei acesso aos materiais?</h3>
-                        <i class="fas fa-plus text-pink-500"></i>
-                    </button>
-                    <div class="faq-content mt-4 hidden">
-                        <p class="text-gray-600">
-                            Você pode baixar os arquivos e guardá-los em seu dispositivo para sempre! Além disso, disponibilizamos os materiais em uma área de membros por 1 ano, para que você possa acessar quando quiser.
-                        </p>
+                <div class="flex justify-center">
+                    <div class="flex items-center space-x-2 text-sm text-text">
+                        <i class="fas fa-lock"></i>
+                        <span>Compra 100% segura</span>
+                        <i class="fas fa-shield-alt ml-4"></i>
+                        <span>Garantia de 7 dias</span>
                     </div>
                 </div>
             </div>
@@ -543,107 +515,83 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 bg-pink-900 text-white">
-        <div class="container mx-auto max-w-6xl">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                <div class="text-2xl font-bold title-font mb-4 md:mb-0">Beleza Interior</div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-white hover:text-pink-300 text-xl"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white hover:text-pink-300 text-xl"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="text-white hover:text-pink-300 text-xl"><i class="fab fa-pinterest"></i></a>
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-2xl font-serif font-bold text-primary mb-2">Beleza<span class="text-accent">Confiante</span></div>
+                    <p class="text-white/70 text-sm">Transformando vidas femininas através da autoestima e organização</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-facebook text-xl"></i></a>
+                    <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-tiktok text-xl"></i></a>
                 </div>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Links Úteis</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-pink-200 hover:text-white">Termos de Uso</a></li>
-                        <li><a href="#" class="text-pink-200 hover:text-white">Política de Privacidade</a></li>
-                        <li><a href="#" class="text-pink-200 hover:text-white">Trabalhe Conosco</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Contato</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> contato@belezainterior.com</li>
-                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> (11) 98765-4321</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Newsletter</h3>
-                    <p class="text-pink-200 mb-4">Receba dicas exclusivas no seu e-mail!</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 rounded-l text-gray-800 w-full">
-                        <button class="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-r">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="border-t border-pink-800 pt-8 text-center text-pink-300 text-sm">
-                <p>© 2023 Beleza Interior. Todos os direitos reservados.</p>
-                <p class="mt-2">Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.</p>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-sm text-white/70">
+                <p>© 2023 BelezaConfiante. Todos os direitos reservados.</p>
+                <p class="mt-2"><a href="#" class="hover:text-primary transition">Termos de Uso</a> | <a href="#" class="hover:text-primary transition">Política de Privacidade</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <a href="#" class="bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg">
-            <i class="fab fa-whatsapp text-3xl"></i>
-        </a>
-    </div>
-
     <script>
-        // FAQ Toggle
+        // Current date and time
+        function updateDateTime() {
+            const now = new Date();
+            
+            // Format date as DD/MM/YYYY
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const year = now.getFullYear();
+            document.getElementById('current-date').textContent = `${day}/${month}/${year}`;
+            
+            // Format time as HH:MM
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            document.getElementById('current-time').textContent = `${hours}:${minutes}`;
+        }
+        
+        // Countdown timer (17 hours)
+        function updateCountdown() {
+            const now = new Date();
+            const endTime = new Date(now.getTime() + 17 * 60 * 60 * 1000); // 17 hours from now
+            
+            const diff = endTime - now;
+            
+            if (diff <= 0) {
+                document.getElementById('countdown').textContent = "00:00:00";
+                document.getElementById('countdown2').textContent = "00:00:00";
+                return;
+            }
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = 
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            document.getElementById('countdown2').textContent = 
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+        
+        // FAQ toggle
         document.querySelectorAll('.faq-toggle').forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
                 const icon = button.querySelector('i');
                 
                 content.classList.toggle('hidden');
-                
-                if (content.classList.contains('hidden')) {
-                    icon.classList.remove('fa-minus');
-                    icon.classList.add('fa-plus');
-                } else {
-                    icon.classList.remove('fa-plus');
-                    icon.classList.add('fa-minus');
-                }
+                icon.classList.toggle('rotate-180');
             });
         });
         
-        // Countdown Timer
-        function updateCountdown() {
-            const now = new Date();
-            const midnight = new Date();
-            midnight.setHours(24, 0, 0, 0);
-            
-            const diff = midnight - now;
-            
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
-        }
-        
-        setInterval(updateCountdown, 1000);
+        // Initialize and update
+        updateDateTime();
         updateCountdown();
-        
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.querySelector('button[class*="md:hidden"]');
-        const nav = document.querySelector('nav[class*="hidden"]');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            nav.classList.toggle('hidden');
-        });
+        setInterval(updateDateTime, 60000); // Update time every minute
+        setInterval(updateCountdown, 1000); // Update countdown every second
     </script>
 </body>
 </html>
