@@ -764,5 +764,28 @@
 
   atualizarContador();
 </script>
+    <script>
+  // Tempo inicial em segundos (7 minutos e 43 segundos = 463 segundos)
+  let tempoRestante = 7 * 60 + 43;
+
+  function atualizarContador() {
+    const minutos = Math.floor(tempoRestante / 60);
+    const segundos = tempoRestante % 60;
+
+    // Formata sempre com dois dígitos
+    const texto = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+
+    document.getElementById("contador").textContent = texto;
+
+    if (tempoRestante > 0) {
+      tempoRestante--;
+      setTimeout(atualizarContador, 1000);
+    } else {
+      document.getElementById("contador").textContent = "Tempo esgotado!";
+    }
+  }
+
+  atualizarContador();
+</script>
 </body>
 </html>
