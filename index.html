@@ -6,6 +6,85 @@
     <title>Descubra o Segredo para se Sentir Linda, Confiante e Realizada Todos os Dias!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+  .carousel-container {
+    width: 100%;
+    max-width: 350px;
+    margin: 50px auto;
+    position: relative;
+  }
+
+  .carousel-slide {
+    display: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid #f8bbd0;
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+  .carousel-slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .active-slide {
+    display: block;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    padding: 8px;
+    margin-top: -22px;
+    color: #d81b60;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 3px;
+    user-select: none;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: #d81b60;
+    color: #fff;
+  }
+
+  .dots {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #f8bbd0;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .active-dot {
+    background-color: #d81b60;
+  }
+</style>
+
     <script>
         tailwind.config = {
             theme: {
