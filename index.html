@@ -515,7 +515,7 @@
                 <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 mb-8">
                     <p class="font-bold mb-2">⚠️ Oferta válida somente para hoje, <span id="current-date">00/00/0000</span> às <span id="current-time">00:00</span>.</p>
                     <p class="mb-4">Tempo restante para garantir seu desconto:</p>
-                    <div id="countdown" class="text-3xl font-bold">17:00:00</div>
+                    <div id="contador" style="font-size: 24px; color: #d81b60; font-weight: bold;"></div>
                 </div>
                 
                 <button class="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-8 rounded-full shadow-lg transition transform hover:scale-105 mb-8 pulse">QUERO MEU KIT AGORA!</button>
@@ -740,6 +740,29 @@
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active-dot";
   }
+</script>
+    <script>
+  // Tempo inicial em segundos (7 minutos e 43 segundos = 463 segundos)
+  let tempoRestante = 7 * 60 + 43;
+
+  function atualizarContador() {
+    const minutos = Math.floor(tempoRestante / 60);
+    const segundos = tempoRestante % 60;
+
+    // Formata os números para sempre terem 2 dígitos
+    const texto = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+
+    document.getElementById("contador").textContent = texto;
+
+    if (tempoRestante > 0) {
+      tempoRestante--;
+      setTimeout(atualizarContador, 1000);
+    } else {
+      document.getElementById("contador").textContent = "Tempo esgotado!";
+    }
+  }
+
+  atualizarContador();
 </script>
 </body>
 </html>
